@@ -8,6 +8,11 @@ from settings import settings
 from interpreter.lexer import Lexer
 from interpreter.interpreter import Interpreter
 
+DICEBOT_MAJOR = 1
+DICEBOT_MINOR = 0
+DICEBOT_PATCH = 0
+DICEBOT_VERSION = "{}.{}.{}".format(DICEBOT_MAJOR, DICEBOT_MINOR, DICEBOT_PATCH)
+
 
 def create_log_folder():
     folder_path = os.path.dirname(os.path.abspath(settings.LOG_FILE_PATH))
@@ -72,6 +77,7 @@ class DiceBotClient(discord.Client):
             "Discord Dice Bot is a small Discord bot developed by Maxime Hohl.\n"
             "Git repo : https://git.ephesos.eu/maxime/DiscordDiceBot\n"
             "Licence : CC BY-SA 4.0\n"
+            "Version : {}\n"
             "\n"
             "Commands :\n"
             "  - help : this message\n"
@@ -83,7 +89,7 @@ class DiceBotClient(discord.Client):
             "To this mathematical you can add dice rolling operator which look like nDm where "
             "n is the number of dice you want to roll and m the maximum value of the dice.\n"
             "For example 2d6 + 3 will roll two six faced dice and then add 3 to the result of that roll."
-            "```",
+            "```".format(DICEBOT_VERSION),
             delete_after=settings.TIME_BEFORE_CLEANING_HELP if settings.TIME_BEFORE_CLEANING_HELP != -1 else None
         )
 

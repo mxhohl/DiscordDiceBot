@@ -1,6 +1,9 @@
 Discord Dice Bot
 ================
 
+[![Release 1.0.0](https://img.shields.io/badge/release-v1.0.0-informational.svg)](https://git.ephesos.eu/maxime/DiscordDiceBot/releases)
+[![Python 3.6](https://img.shields.io/badge/python-3.6-informational.svg)](https://www.python.org/)
+
 **Discord Dice Bot** is a discord bot that can calculate mathematical equations containing additions, 
 subtractions, multiplications and divisions as operators, numbers and dices as operands.
 It has been written by *Maxime Hohl* in [Python](https://www.python.org/) 3.6 using 

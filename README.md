@@ -18,37 +18,46 @@ How to
 ### Install the bot
 
 Install dependencies :
-```shell
+```bash
 apt-get update -y
 apt-get install git python3 python3-venv python3-pip
 ```
 
 Then clone the *git* repository :
-```shell
-git clone https://git.ephesos.eu/maxime/DiscordDiceBot.git
+```bash
+git clone https://git.ephesos.eu/maxime/DiscordDiceBot.git -b master
 ```
 
 Create the virtual environment :
-```shell
+```bash
 cd DiscordDiceBot
 python3 -m venv venv
 ```
 
 Switch to the environment we just created :
-```shell
+```bash
 source ./venv/bin/activate
 ```
 
 Download the python's dependencies :
-```shell
+```bash
 pip3 install discord.py
 ```
 
 Now you can run the bot with :
-```shell
+```bash
 chmod u+x run.sh
 ./run.sh
 ```
+
+### Update the bot
+
+Stop the bot, then go to the bot folder and type the following command :
+```bash
+git pull
+```
+
+The bot is now up-to-date.
 
 ### Use the bot
 
@@ -60,8 +69,15 @@ You need to fill the token field before you use the bot.
 To generate this token go to Discord 
 [applications page](https://discordapp.com/developers/applications/me).
 
-
 All the other settings are detailed in the `settings.py` file.
+
+#### Invite the bot to a server
+
+Go to this url where you replaced `<CLIENT ID>` with the discord application
+client id :
+```url
+https://discordapp.com/oauth2/authorize?&client_id=<CLIENT ID>&scope=bot&permissions=0
+```
 
 #### Commands
 All the commands need to be prefixed with the `COMMAND_PREFIX` setting.

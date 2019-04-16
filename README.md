@@ -17,8 +17,7 @@ How to
 Install dependencies :
 ```shell
 apt-get update -y
-apt-get install git python3-venv python3-pip
-pip3 install discord.py
+apt-get install git python3 python3-venv python3-pip
 ```
 
 Then clone the *git* repository :
@@ -37,9 +36,15 @@ Switch to the environment we just created :
 source ./venv/bin/activate
 ```
 
-You can run the but with :
+Download the python's dependencies :
 ```shell
-python3 run.py
+pip3 install discord.py
+```
+
+Now you can run the bot with :
+```shell
+chmod u+x run.sh
+./run.sh
 ```
 
 ### Use the bot
